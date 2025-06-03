@@ -1,0 +1,19 @@
+{
+  "name": "ticket-bot-v1-by-jimmy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "fs": "^0.0.1-security",
+    "moment": "^2.30.1",
+    "path": "^0.12.7",
+    "puppeteer": "^24.10.0"
+  }
+}
