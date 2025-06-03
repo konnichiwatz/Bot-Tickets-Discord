@@ -12,7 +12,7 @@ module.exports = {
       .setTitle('🎫 เปิด Ticket')
       .setDescription('คลิกปุ่มด้านล่างเพื่อเปิด Ticket')
       .setTimestamp()
-      .setFooter({ text: 'ระบบ Ticket Bot' });
+      .setFooter({ text: 'Powered by Jimmy Lionez (Admin_Jimmy)' });
 
     const button = new ButtonBuilder()
       .setCustomId('open_ticket')  // id สำหรับตรวจจับปุ่ม
