@@ -42,11 +42,10 @@ This bot helps manage support tickets with a modern UI, role-based permissions, 
 
 ===========================================================================
 
-นี่คือบอทตัวที่สองที่ผมได้พัฒนาขึ้น โค้ดอาจดูซับซ้อนหรือไม่เป็นระเบียบในบางส่วน
+โค้ดอาจดูซับซ้อนหรือไม่เป็นระเบียบในบางส่วน
 แต่สิ่งที่สำคัญที่สุดคือมันสามารถทำงานได้อย่างถูกต้องโดยไม่มีข้อผิดพลาด
 ผมยินดีรับคำแนะนำและข้อคิดเห็นเพื่อนำไปพัฒนาและปรับปรุงบอทให้ดียิ่งขึ้นต่อไป
 
-This is the first bot I have developed.
 The code may appear complex or somewhat disorganized in parts but the most important thing is that it runs correctly without errors.
 I welcome any suggestions and feedback to further improve and enhance the bot.
 
