@@ -1,67 +1,56 @@
-📦 ระบบนี้ทำอะไรได้บ้าง
-ระบบ Discord Bot สำหรับเปิดห้อง Ticket แบบเป็นส่วนตัว เพื่อให้สมาชิกสามารถขอความช่วยเหลือ/สอบถามได้โดยไม่รบกวนแชทหลัก
+===========================================================================
+# 🎟️ Discord Ticket Bot
 
-⚙️ ฟีเจอร์หลักทั้งหมด
-✅ 1. ปุ่มสร้าง Ticket
-- มี Embed พร้อมปุ่ม [🎫 เปิด Ticket]
-- เมื่อกดปุ่ม → สร้างห้อง ticket-1, ticket-2, ...
-- ระบบ รันเลขต่อเนื่อง ไม่ซ้ำ
+A professional and fully customizable **Ticket Bot** for Discord built using **Discord.js v14**.  
+This bot helps manage support tickets with a modern UI, role-based permissions, and detailed message logging.
 
-🔒 2. ตั้งค่าห้อง Ticket อัตโนมัติ
-ให้เห็นเฉพาะ:
-- คนที่เปิด Ticket
-- ทีมงาน (ตาม Role ที่กำหนด)
-- แจ้ง Tag คนที่เกี่ยวข้อง → ลบทิ้งอัตโนมัติ
-- ส่ง Embed แนะนำในห้อง พร้อมปุ่ม
+## 📌 Features
 
-🛠 3 ปุ่มในห้อง Ticket
-📌 Claim
-สำหรับทีมงานเท่านั้น
-- กดแล้วขึ้นแจ้งว่าใครรับเคสนี้
+- ✅ Slash Commands (`/setup`, `/claim`, `/invite`, etc.)
+- 🎫 Create tickets with custom names (`ticket-1`, `ticket-2`, ...)
+- 👥 Auto-tag ticket creator and support staff (with auto-delete mention)
+- 📌 Buttons inside ticket channel:
+  - 🔒 Close
+  - 📝 Close with Reason (with Modal input)
+  - 🙋 Claim (only allowed roles)
+- 📩 Sends DM summary to the ticket creator on close
+- 📄 Transcript saved as HTML, PDF and uploaded (custom domain or local file path)
+- 🔐 Role & channel permission control
+- 📁 Modular and organized code (Slash Commands, Buttons, Modals)
+- 🧾 Configurable via `config.json`
+===========================================================================
+# 🎟️ Discord Ticket Bot
+บอท Ticket Bot สำหรับ Discord ที่มืออาชีพและปรับแต่งได้อย่างครบถ้วน สร้างด้วย Discord.js v14
+บอทนี้ช่วยจัดการระบบซัพพอร์ตติกเก็ต ด้วย UI ที่ทันสมัย, การตั้งค่าสิทธิ์ตามบทบาท (Role) และระบบบันทึกข้อความอย่างละเอียด
 
-🔐 Close
-กดแล้วขึ้นปุ่มยืนยันปิด Ticket
-เมื่อยืนยัน:
-- ส่ง DM สรุปให้คนเปิด
-- สร้าง Transcript HTML , PDF
-- ลบห้องหลังจากนั้น
--           { name: '🆔 Ticket ID', value: ticketId, inline: true },
-            { name: '👤 ผู้เปิด', value: `<@${openerId}>`, inline: true },
-            { name: '🔒 ผู้ปิด', value: `<@${closerId}>`, inline: true },
-            { name: '📅 เวลาเปิด', value: openedAt, inline: false },
-            { name: '📄 Reason', value: `**${reason}**`, inline: false }
+## 📌 ฟีเจอร์
 
-❓ Close With Reason
-- เด้ง Modal ให้กรอกเหตุผล
-- ส่ง Embed สรุป (พร้อมเหตุผล) ไปทาง DM
-- สร้าง Transcript, pdf และลบห้อง
+- ✅ คำสั่ง Slash Commands (/setup, /claim, /invite ฯลฯ)
+- 🎫 สร้างติกเก็ตชื่อกำหนดเองได้ (ticket-1, ticket-2, ...)
+- 👥 แท็กผู้สร้างติกเก็ตและทีมซัพพอร์ตอัตโนมัติ (พร้อมลบแท็กอัตโนมัติ)
+- 📌 ปุ่มภายในช่องติกเก็ต:
+  - 🔒 ปิดติกเก็ต
+  - 📝 ปิดติกเก็ตพร้อมระบุเหตุผล (มีหน้ากรอกข้อมูล Modal)
+  - 🙋 รับงาน (เฉพาะผู้มีสิทธิ์ตามบทบาท)
+- 📩 ส่งข้อความสรุปติกเก็ตใน DM ให้ผู้สร้างติกเก็ตเมื่อปิดติกเก็ต
+- 📄 บันทึก Transcript เป็นไฟล์ HTML, PDF พร้อมอัปโหลด (รองรับโดเมนของตัวเองหรือเก็บไฟล์ในเครื่อง)
+- 🔐 ควบคุมสิทธิ์ Role และ Channel อย่างละเอียด
+- 📁 โค้ดแยกส่วนและจัดระเบียบอย่างดี (Slash Commands, Buttons, Modals)
+- 🧾 ตั้งค่าปรับแต่งได้ผ่านไฟล์ config.json
+===========================================================================
 
-🧾 Transcript HTML PDF
-- ดึงข้อความจากห้อง Ticket ทั้งหมด
-- บันทึกเป็น .html และ pdf พร้อมชื่อห้อง
-- สไตล์ Dark Mode (มืออาชีพ)
-- คืน URL เช่น https://yourdomain.com/transcripts/ticket-5.html
+นี่คือบอทตัวที่สองที่ผมได้พัฒนาขึ้น โค้ดอาจดูซับซ้อนหรือไม่เป็นระเบียบในบางส่วน
+แต่สิ่งที่สำคัญที่สุดคือมันสามารถทำงานได้อย่างถูกต้องโดยไม่มีข้อผิดพลาด
+ผมยินดีรับคำแนะนำและข้อคิดเห็นเพื่อนำไปพัฒนาและปรับปรุงบอทให้ดียิ่งขึ้นต่อไป
 
-💬 Slash Command ที่มี
-คำสั่งใช้ทำอะไร
-- /claim	ใช้แทนปุ่ม Claim (เฉพาะทีมงาน)
-- /invite <user>	เชิญผู้ใช้เข้ามาดูห้อง Ticket นี้
+This is the first bot I have developed.
+The code may appear complex or somewhat disorganized in parts but the most important thing is that it runs correctly without errors.
+I welcome any suggestions and feedback to further improve and enhance the bot.
 
-🧾 บันทึกข้อความ (log) ลง console เพื่อดูว่าเกิดเหตุการณ์อะไรขึ้นบ้าง เช่น:
-- เปิด Ticket
-- ปิด Ticket
-- Claim Ticket
-- ข้อความผิดพลาด
-  console.log(`📩 เปิด Ticket:
-  - ห้อง: ${channelName}
-  - ผู้เปิด: ${interaction.user.tag} (${interaction.user.id})
-  - Ticket Number: ${counter}
-  - เวลา: ${new Date().toLocaleString()}`);
-//
-  console.log(`📪 Ticket ถูกปิดแล้ว:
-  - ห้อง: ${channel.name}
-  - ผู้เปิด: ${openerId}
-  - ผู้ปิด: ${closerId}
-  - Transcript: ${transcriptUrl || 'ไม่สามารถสร้างได้'}
-  - เหตุผล: ไม่ระบุ (ปิดโดยไม่มีเหตุผล)`);
-//
+ขอบคุณ จิมมี่ Thanks, Jimmy.
+
+===========================================================================
+
+contact
+discord : jiimmmmy._.
+facebook : https://www.facebook.com/jimmy.lionez
